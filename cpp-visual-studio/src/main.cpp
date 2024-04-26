@@ -1,7 +1,7 @@
 /*
   SDL C++ Visual Studio Template
 
-  Copyright (C) 2022 Fredy Rogez (@FredyRogez)
+  Copyright (C) 2024 Fredy Rogez (@FredyRogez)
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages

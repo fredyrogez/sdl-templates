@@ -20,8 +20,10 @@ else()
     set(SDL2MIXER_FLAC              0)
 endif()
 
-set(SDL2MIXER_MOD_MODPLUG           1)
-set(SDL2MIXER_MOD_XMP               0)
+set(SDL2MIXER_GME                   1)
+
+set(SDL2MIXER_MOD_MODPLUG           0)
+set(SDL2MIXER_MOD_XMP               1)
 set(SDL2MIXER_MOD_XMP_LITE          0)
 if(SDL2MIXER_MOD_MODPLUG OR SDL2MIXER_MOD_XMP OR SDL2MIXER_MOD_XMP_LITE)
     set(SDL2MIXER_MOD               1)
@@ -29,9 +31,9 @@ else()
     set(SDL2MIXER_MOD               0)
 endif()
 
-set(SDL2MIXER_MP3_DRMP3             1)
+set(SDL2MIXER_MP3_MINIMP3           1)
 set(SDL2MIXER_MP3_MPG123            0)
-if(SDL2MIXER_MP3_DRMP3 OR SDL2MIXER_MP3_MPG123)
+if(SDL2MIXER_MP3_MINIMP3 OR SDL2MIXER_MP3_MPG123)
     set(SDL2MIXER_MP3               1)
 else()
     set(SDL2MIXER_MP3               0)
@@ -64,8 +66,11 @@ endif()
 
 set(SDL2MIXER_WAVE                  1)
 
+set(SDL2MIXER_WAVPACK               1)
+
 set(SDL2MIXER_SDL2_REQUIRED_VERSION 2.0.9)
 
+get_filename_component(CMAKE_CURRENT_LIST_DIR ${CMAKE_CURRENT_LIST_DIR} REALPATH)
 get_filename_component(prefix "${CMAKE_CURRENT_LIST_DIR}/../../.." ABSOLUTE)
 set(exec_prefix "${prefix}")
 set(bindir "${exec_prefix}/bin")
